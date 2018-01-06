@@ -11,7 +11,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const MinifyPluginConfig = new MinifyPlugin();
 const config = {
     entry: {
         index: APP_DIR + '/index.js'
@@ -31,7 +32,7 @@ const config = {
             }
           ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig,MinifyPluginConfig]
 };
  
 module.exports = config;
