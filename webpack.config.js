@@ -14,21 +14,22 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const config = {
     entry: {
-        family_view_create: APP_DIR + '/family_view_create.jsx'
+        family_view_create: APP_DIR + '/family_view_create.js'
     },
     output: {
         path: BUILD_DIR,
         filename: "[name].bundle.js"
     },
     module : {
-        loaders : [
+        rules: [
             {
-                test : /\.jsx?/,
-                include : APP_DIR,
-                loader : 'babel-loader',
-                exclude: /node_modules/,
+              test: /\.js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: 'babel-loader'
+              }
             }
-        ]
+          ]
     },
     plugins: [HtmlWebpackPluginConfig]
 };
