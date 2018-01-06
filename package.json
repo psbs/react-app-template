@@ -30,6 +30,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
+    "build": "webpack",
     "start": "webpack-dev-server"
   }
 }

@@ -14,7 +14,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const config = {
     entry: {
-        family_view_create: APP_DIR + '/family_view_create.js'
+        index: APP_DIR + '/index.js'
     },
     output: {
         path: BUILD_DIR,
