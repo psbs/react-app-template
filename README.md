@@ -4,8 +4,15 @@ A Sample React template for react-app integration into existing Applications in 
 
 ## Steps:
 
+1. Initial project setup 
 ```
 cd react-app-template
 npm i -g yarn
 yarn
+```
+
+2. Running local dev server
+```
+yarn build
+yarn start
 ```
